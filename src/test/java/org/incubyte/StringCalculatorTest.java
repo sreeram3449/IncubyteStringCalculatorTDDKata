@@ -21,5 +21,11 @@ public class StringCalculatorTest {
         assertEquals(1,StringCalculator.add("1"));
     }
 
-    //TODO test for String containing 2 numbers should return sum of numbers
+    /**
+     * Returns sum of numbers if passed a String containing two numbers
+     */
+    @Test
+    public void shouldReturnSumOfNumbersOnTwoNumberString(){
+        assertEquals(3,StringCalculator.add("1,2"));
+    }
 }
