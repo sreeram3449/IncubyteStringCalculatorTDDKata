@@ -53,4 +53,6 @@ public class StringCalculatorTest {
         assertEquals(3,StringCalculator.add("//;\n1;2"));
     }
 
+    //TODO test should handle any regex character as custom delimiter in place of ";"
+
 }
