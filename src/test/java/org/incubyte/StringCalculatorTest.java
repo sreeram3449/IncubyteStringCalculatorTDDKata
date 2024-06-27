@@ -2,11 +2,11 @@ package org.incubyte;
 
 import org.junit.Test;
 
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class StringCalculatorTest {
     @Test
-    public void test(){
-        fail("Not yet Implemented");
+    public void shouldReturnZeroOnEmptyString(){
+        assertEquals(0,StringCalculator.add(""));
     }
 }
