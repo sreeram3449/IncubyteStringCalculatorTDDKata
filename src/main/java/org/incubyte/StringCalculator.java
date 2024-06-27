@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringCalculator {
+    //TODO should throw Exception if passed a String with negative numbers
     public static int add(String numbers){
         if(numbers.isEmpty()){
             return 0;

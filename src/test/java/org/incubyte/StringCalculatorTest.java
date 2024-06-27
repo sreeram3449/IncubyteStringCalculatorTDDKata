@@ -61,5 +61,12 @@ public class StringCalculatorTest {
         assertEquals(3,StringCalculator.add("//.\n1.2"));
     }
 
-    //TODO test should throw Exception id passed a String with negative numbers
+    /**
+     *     should throw Exception if passed a String with negative numbers
+     */
+    @Test
+    public void shouldThrowExceptionOnNegativeNumberInString(){
+        Exception e = assertThrows(Exception.class,StringCalculator.add("//.\n1.-4.3"));
+        assertEquals("Negative numbers not allowed",e.getMessage());
+    }
 }
