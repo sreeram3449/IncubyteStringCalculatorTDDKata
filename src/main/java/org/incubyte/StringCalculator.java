@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringCalculator {
+    //TODO should handle any regex character as custom delimiter in place of ";"
     public static int add(String numbers){
         if(numbers.isEmpty()){
             return 0;
