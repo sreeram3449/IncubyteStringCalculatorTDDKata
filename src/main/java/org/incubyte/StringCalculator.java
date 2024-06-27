@@ -1,10 +1,10 @@
 package org.incubyte;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringCalculator {
-    //TODO should throw Exception with list of numbers if passed a String with multiple negative numbers
     public static int add(String numbers) {
         if(numbers.isEmpty()){
             return 0;
@@ -42,10 +42,14 @@ public class StringCalculator {
     }
 
     private static void throwExceptionOnNegativeNumber(String[] tokens) {
+        ArrayList<String> negativeNumbers = new ArrayList<>();
         for(String i: tokens){
             if(toInt(i)<0) {
-                throw new RuntimeException("Negative numbers not allowed " + i);
+                negativeNumbers.add(i);
             }
+        }
+        if(!negativeNumbers.isEmpty()) {
+            throw new RuntimeException("Negative numbers not allowed " + String.join(",", negativeNumbers));
         }
     }
 
