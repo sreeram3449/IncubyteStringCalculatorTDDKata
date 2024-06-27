@@ -20,4 +20,6 @@ public class StringCalculatorTest {
     public void shouldReturnNumberOnSingleNumberString(){
         assertEquals(1,StringCalculator.add("1"));
     }
+
+    //TODO test for String containing 2 numbers should return sum of numbers
 }
