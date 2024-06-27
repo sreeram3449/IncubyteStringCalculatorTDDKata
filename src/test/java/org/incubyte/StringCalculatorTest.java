@@ -29,5 +29,11 @@ public class StringCalculatorTest {
         assertEquals(3,StringCalculator.add("1,2"));
     }
 
-    //TODO test should return sum of all N numbers if passed a string containing N numbers
+    /**
+     *     Returns sum of all N numbers if passed a string containing N numbers seperated by coma
+     */
+    @Test
+    public void shouldReturnSumOfNNumbersOnNNumberedString(){
+        assertEquals(6,StringCalculator.add("1,2,3"));
+    }
 }

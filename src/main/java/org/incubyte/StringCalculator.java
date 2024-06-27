@@ -1,7 +1,7 @@
 package org.incubyte;
 
 public class StringCalculator {
-
+    //TODO Should return Sum of N numbers if passed a String containing N numbers seperated by coma
     public static int add(String numbers){
         if(numbers.isEmpty()){
             return 0;
