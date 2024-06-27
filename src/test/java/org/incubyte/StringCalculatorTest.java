@@ -9,4 +9,6 @@ public class StringCalculatorTest {
     public void shouldReturnZeroOnEmptyString(){
         assertEquals(0,StringCalculator.add(""));
     }
+
+    //TODO test for Single number in string should return same string
 }
