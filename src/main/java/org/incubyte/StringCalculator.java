@@ -1,6 +1,7 @@
 package org.incubyte;
 
 public class StringCalculator {
+    //TODO Should handle custom delimiter passed in between // and \n at the beginning of the String
     public static int add(String numbers){
         if(numbers.isEmpty()){
             return 0;

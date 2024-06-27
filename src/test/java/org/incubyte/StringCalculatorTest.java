@@ -45,5 +45,12 @@ public class StringCalculatorTest {
         assertEquals(6,StringCalculator.add("1\n2,3"));
     }
 
-    //TODO test to handle custom delimiter passed in between // and \n at the beginning of the String
+    /**
+     * Should handle custom delimiter passed in between // and \n at the beginning of the String
+     */
+    @Test
+    public void shouldHandleCustomDelimiter(){
+        assertEquals(3,StringCalculator.add("//;\n1;2"));
+    }
+
 }
