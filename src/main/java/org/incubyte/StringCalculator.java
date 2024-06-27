@@ -4,17 +4,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringCalculator {
-    //TODO should throw Exception if passed a String with negative numbers
-    public static int add(String numbers){
+    public static int add(String numbers) {
         if(numbers.isEmpty()){
             return 0;
         } else {
             String[] tokens = splitString(numbers);
-            int sum = 0;
-            for (String i : tokens) {
-                sum = sum + toInt(i);
-            }
-            return sum;
+            throwExceptionOnNegativeNumber(tokens);
+            return sumOfNumbers(tokens);
         }
     }
 
@@ -42,5 +38,21 @@ public class StringCalculator {
 
     private static int toInt(String token){
         return Integer.parseInt(token);
+    }
+
+    private static void throwExceptionOnNegativeNumber(String[] tokens) {
+        for(String i: tokens){
+            if(toInt(i)<0) {
+                throw new RuntimeException("Negative numbers not allowed " + i);
+            }
+        }
+    }
+
+    private static int sumOfNumbers(String[] tokens){
+        int sum = 0;
+        for (String i : tokens) {
+            sum = sum + toInt(i);
+        }
+        return sum;
     }
 }
