@@ -1,7 +1,6 @@
 package org.incubyte;
 
 public class StringCalculator {
-    //TODO Should handle New Line as Delimiter along with comma
     public static int add(String numbers){
         if(numbers.isEmpty()){
             return 0;
@@ -18,7 +17,7 @@ public class StringCalculator {
     }
 
     private static String[] splitString(String numbers){
-        return numbers.split(",");
+        return numbers.split(",|\n");
     }
 
     private static int toInt(String token){

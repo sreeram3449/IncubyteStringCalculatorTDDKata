@@ -44,4 +44,6 @@ public class StringCalculatorTest {
     public void shouldHandleNewLineAsDelimiterAlongWithComma(){
         assertEquals(6,StringCalculator.add("1\n2,3"));
     }
+
+    //TODO test to handle custom delimiter passed in between // and \n at the beginning of the String
 }
