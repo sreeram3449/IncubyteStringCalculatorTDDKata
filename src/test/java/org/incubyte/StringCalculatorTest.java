@@ -22,7 +22,7 @@ public class StringCalculatorTest {
     }
 
     /**
-     * Returns sum of numbers if passed a String containing two numbers separated by coma
+     * Returns sum of numbers if passed a String containing two numbers separated by comma
      */
     @Test
     public void shouldReturnSumOfNumbersOnTwoNumberString(){
@@ -30,10 +30,12 @@ public class StringCalculatorTest {
     }
 
     /**
-     *     Returns sum of all N numbers if passed a string containing N numbers separated by coma
+     *     Returns sum of all N numbers if passed a string containing N numbers separated by comma
      */
     @Test
     public void shouldReturnSumOfNNumbersOnNNumberedString(){
         assertEquals(6,StringCalculator.add("1,2,3"));
     }
+
+    //TODO test should allow new line as delimiter along with comma
 }
