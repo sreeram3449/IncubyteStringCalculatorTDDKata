@@ -22,7 +22,7 @@ public class StringCalculatorTest {
     }
 
     /**
-     * Returns sum of numbers if passed a String containing two numbers seperated by coma
+     * Returns sum of numbers if passed a String containing two numbers separated by coma
      */
     @Test
     public void shouldReturnSumOfNumbersOnTwoNumberString(){
@@ -30,7 +30,7 @@ public class StringCalculatorTest {
     }
 
     /**
-     *     Returns sum of all N numbers if passed a string containing N numbers seperated by coma
+     *     Returns sum of all N numbers if passed a string containing N numbers separated by coma
      */
     @Test
     public void shouldReturnSumOfNNumbersOnNNumberedString(){
