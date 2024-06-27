@@ -37,5 +37,11 @@ public class StringCalculatorTest {
         assertEquals(6,StringCalculator.add("1,2,3"));
     }
 
-    //TODO test should allow new line as delimiter along with comma
+    /**
+     *   Should allow \n as delimiter along with comma
+     */
+    @Test
+    public void shouldHandleNewLineAsDelimiterAlongWithComma(){
+        assertEquals(6,StringCalculator.add("1\n2,3"));
+    }
 }
