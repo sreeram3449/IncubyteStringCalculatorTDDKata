@@ -60,4 +60,6 @@ public class StringCalculatorTest {
     public void shouldHandleAnyRegexCharAsCustomDelimiter(){
         assertEquals(3,StringCalculator.add("//.\n1.2"));
     }
+
+    //TODO test should throw Exception id passed a String with negative numbers
 }
