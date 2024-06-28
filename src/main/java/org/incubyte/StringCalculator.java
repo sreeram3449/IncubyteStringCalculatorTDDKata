@@ -57,6 +57,9 @@ public class StringCalculator {
     private static int sumOfNumbers(String[] tokens){
         int sum = 0;
         for (String i : tokens) {
+            if(toInt(i)>1000){
+                continue;
+            }
             sum = sum + toInt(i);
         }
         return sum;
