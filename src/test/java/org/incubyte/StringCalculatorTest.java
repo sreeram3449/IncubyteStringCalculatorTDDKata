@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StringCalculatorTest {
+
     /**
      * Returns 0 if passed an Empty String
      */
@@ -59,6 +60,7 @@ public class StringCalculatorTest {
     @Test
     public void shouldHandleAnyRegexCharAsCustomDelimiter(){
         assertEquals(3,StringCalculator.add("//.\n1.2"));
+        assertEquals(7,StringCalculator.add("//*\n1*2*4"));
     }
 
     /**

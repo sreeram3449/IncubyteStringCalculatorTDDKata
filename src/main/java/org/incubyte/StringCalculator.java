@@ -5,13 +5,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringCalculator {
-    //TODO Should ignore numbers greater than 1000 if found in the string
+    /**
+     * Return sum of all numbers from the string passed
+     * @param numbers is a string with custom delimiters between numeric values eg: "//*\n1*2*4*1007"
+     * @return sum of numeric values found in the argument numbers
+     */
     public static int add(String numbers) {
         if(numbers.isEmpty()){
             return 0;
         } else {
             String[] tokens = splitString(numbers);
-            throwExceptionOnNegativeNumber(tokens);
+            handleNegativeNumbers(tokens);
             return sumOfNumbers(tokens);
         }
     }
@@ -42,7 +46,7 @@ public class StringCalculator {
         return Integer.parseInt(token);
     }
 
-    private static void throwExceptionOnNegativeNumber(String[] tokens) {
+    private static void handleNegativeNumbers(String[] tokens) {
         ArrayList<String> negativeNumbers = new ArrayList<>();
         for(String i: tokens){
             if(toInt(i)<0) {
