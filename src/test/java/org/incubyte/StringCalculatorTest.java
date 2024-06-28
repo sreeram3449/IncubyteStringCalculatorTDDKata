@@ -30,7 +30,7 @@ public class StringCalculatorTest {
     }
 
     /**
-     *     Returns sum of all N numbers if passed a string containing N numbers separated by comma
+     * Returns sum of all N numbers if passed a string containing N numbers separated by comma
      */
     @Test
     public void shouldReturnSumOfNNumbersOnNNumberedString(){
@@ -38,7 +38,7 @@ public class StringCalculatorTest {
     }
 
     /**
-     *   Should allow \n as delimiter along with comma
+     * Should allow \n as delimiter along with comma
      */
     @Test
     public void shouldHandleNewLineAsDelimiterAlongWithComma(){
@@ -54,7 +54,7 @@ public class StringCalculatorTest {
     }
 
     /**
-     *    Should handle any regex character as custom delimiter in place of ";"
+     * Should handle any regex character as custom delimiter in place of ";"
      */
     @Test
     public void shouldHandleAnyRegexCharAsCustomDelimiter(){
@@ -62,7 +62,7 @@ public class StringCalculatorTest {
     }
 
     /**
-     *     should throw Exception if passed a String with negative numbers
+     * Should throw Exception if passed a String with negative numbers
      */
     @Test
     public void shouldThrowExceptionOnNegativeNumberInString(){
@@ -71,11 +71,19 @@ public class StringCalculatorTest {
     }
 
     /**
-     *     should throw Exception with list of numbers if passed a String with multiple negative numbers
+     * Should throw Exception with list of numbers if passed a String with multiple negative numbers
      */
     @Test
     public void shouldThrowExceptionWithListOnNegativeNumbersInString(){
         Exception e = assertThrows(RuntimeException.class,()->StringCalculator.add("//.\n1.-4.-3.-7"));
         assertEquals("Negative numbers not allowed -4,-3,-7",e.getMessage());
+    }
+
+    /**
+     * Should ignore numbers greater than 1000 if found in the string
+     */
+    @Test
+    public void shouldIgnoreNumbersGreaterThanThousand(){
+        assertEquals(6,StringCalculator.add("//,\n1,2,3,1007"));
     }
 }

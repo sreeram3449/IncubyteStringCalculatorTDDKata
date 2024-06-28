@@ -5,6 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringCalculator {
+    //TODO Should ignore numbers greater than 1000 if found in the string
     public static int add(String numbers) {
         if(numbers.isEmpty()){
             return 0;
